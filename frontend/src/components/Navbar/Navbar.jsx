@@ -16,6 +16,7 @@ const Navbar = ({ setShowLogin }) => {
         setToken("");
         navigate("/");
     }
+    
     return (
         <div className='navbar'>
             <Link to='/'><img src={assets.logo} alt="" className="logo" /></Link>
@@ -26,7 +27,7 @@ const Navbar = ({ setShowLogin }) => {
                 <a href='#footer' onClick={() => setMenu("contact-us")} className={menu === "contact-us" ? "active" : ""}>contact us</a>
             </ul>
             <div className="navbar-right">
-                <img src={assets.search_icon} alt="" />
+                {/* <img src={assets.search_icon} alt="" /> */}
                 <div className="navbar-search-icon">
                     <Link to='/cart'><img src={assets.basket_icon} alt="" /></Link>
                     <div className={getTotalCartAmount() === 0 ? "" : "dot"}></div>
@@ -37,7 +38,7 @@ const Navbar = ({ setShowLogin }) => {
                         <ul className="nav-profile-dropdown">
                             <li onClick={()=>navigate('/myorders')}><img src={assets.bag_icon} alt="" /><p>Orders</p></li>
                             <hr />
-                            <li onClick={logout}><img src={assets.logout_icon} alt="" /><p>Logout</p></li>
+                            <li onClick={logout} ><img src={assets.logout_icon} alt="" /><p>Logout</p></li>
                         </ul>
                     </div>}
 

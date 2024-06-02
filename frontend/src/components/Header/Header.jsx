@@ -1,5 +1,6 @@
 import React from 'react'
 import './Header.css'
+import { Navigate } from 'react-router-dom'
 
 const Header = () => {
     return (
